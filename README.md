@@ -1,0 +1,1 @@
+This code uses a 32×32 phototransistor-based imaging system using an Arduino Uno using Sean Hodgins guide and Image sensor hardware. The system scans a pixel array, transmits image data over UART, and reconstructs grayscale images on a PC using Python. 
