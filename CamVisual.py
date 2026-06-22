@@ -35,24 +35,17 @@ def process_box(img):
     img = cv2.GaussianBlur(img, (3, 3), 0)
 
     img = img - np.mean(img)
-
     p5 = np.percentile(img, 5)
     p95 = np.percentile(img, 95)
     img = np.clip(img, p5, p95)
 
     img = (img - img.min()) / (img.max() - img.min() + 1e-6)
 
-    img = img ** 0.6
+    img = img **6
 
-    #sharp = cv2.filter2D(
-    #    img,
-    #    -1,
-    #    np.array([[0, -1, 0],
-    #              [-1, 5, -1],
-    #              [0, -1, 0]])
-    #)
+   
 
-    return img#np.clip(sharp, 0, 1)
+    return img
 
 
 def process_class(img):
