@@ -1,0 +1,14 @@
+--cpu=Cortex-M4.fp.sp
+".\bin\adc_vbatt.o"
+".\bin\am_resources.o"
+".\bin\am_util_delay.o"
+".\bin\am_util_faultisr.o"
+".\bin\am_util_stdio.o"
+".\bin\am_devices_led.o"
+".\bin\startup_keil.o"
+"..\..\..\..\..\..\mcu\apollo4p\hal\mcu\keil\bin\libam_hal.lib"
+"..\..\..\..\bsp\keil\bin\libam_bsp.lib"
+--strict --scatter ".\linker_script.sct"
+../../../../../../mcu/apollo4p/hal/mcu/keil/bin/libam_hal.lib(am_hal_global.o) --keep=am_hal_global.o(.data) --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\adc_vbatt.map" -o .\bin\adc_vbatt.axf
